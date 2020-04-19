@@ -210,9 +210,7 @@ public class AVLTree {
 	private static boolean same(AVLNode n1, AVLNode n2) {
 		if (n1 == null && n2 == null)
 			return true;
-		if (n1.data != n2.data)
-			return false;
-		if (n1.height != n2.height)
+		if (n1.data != n2.data || n1.height != n2.height)
 			return false;
 		return same(n1.left, n2.left) && same(n1.right, n2.right);
 	}
